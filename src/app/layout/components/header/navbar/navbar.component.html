@@ -1,0 +1,13 @@
+<nav>
+  <mat-toolbar class="toolbar">
+    <span
+      *ngFor="let n of navItems"
+      class="nav-el"
+      [routerLink]="n.link"
+      routerLinkActive="selected"
+      [routerLinkActiveOptions]="{ exact: n.exactMatch }"
+      >{{ n.title }}
+      <mat-icon *ngIf="n.icon && n.icon !== ''">{{ n.icon }}</mat-icon>
+    </span>
+  </mat-toolbar>
+</nav>

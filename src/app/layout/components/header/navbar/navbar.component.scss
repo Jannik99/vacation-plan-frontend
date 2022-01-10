@@ -1,0 +1,30 @@
+@import "src/app/shared/styles/colors.scss";
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  background: $coral;
+}
+
+.toolbar {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 75px;
+}
+
+.nav-el {
+  cursor: pointer;
+  padding: 15px;
+  mat-icon {
+    vertical-align: middle;
+  }
+}
+
+.selected {
+  border-bottom: 2px solid black;
+}
