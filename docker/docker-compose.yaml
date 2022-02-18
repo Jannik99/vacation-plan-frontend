@@ -1,0 +1,20 @@
+version: "1.0"
+
+services:
+  angular:
+    container_name: angular
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/srv/app/
+      - ../node_modules:/srv/app/node_modules
+    stdin_open: true
+    tty: true
+    ports:
+      - "4200:4200"
+    restart: on-failure
+    command: bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+
+volumes:
+  node_modules:
