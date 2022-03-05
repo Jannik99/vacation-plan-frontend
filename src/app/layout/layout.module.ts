@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/header/navbar/navbar.component';
 import { LayoutRootComponent } from './components/layout-root/layout-root.component';
 import { LayoutRoutingModule } from './layout-routing.module';
+import { LoginDropdownComponent } from './components/header/navbar/login-dropdown/login-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
+    LoginDropdownComponent,
   ],
   imports: [CommonModule, LayoutRoutingModule, BasicModule],
 })

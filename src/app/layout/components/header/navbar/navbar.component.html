@@ -6,8 +6,27 @@
       [routerLink]="n.link"
       routerLinkActive="selected"
       [routerLinkActiveOptions]="{ exact: n.exactMatch }"
-      >{{ n.title }}
-      <mat-icon *ngIf="n.icon && n.icon !== ''">{{ n.icon }}</mat-icon>
+    >
+      <mat-icon *ngIf="n.icon.path !== '' && n.icon.type === icontype.MAT">{{
+        n.icon
+      }}</mat-icon>
+      <div
+        class="svg-icon"
+        *ngIf="n.icon.path !== '' && n.icon.type === icontype.SVG"
+        [inlineSVG]="n.icon.path"
+      ></div>
+      <img
+        class="logo"
+        *ngIf="n.icon.path !== '' && n.icon.type === icontype.IMAGE"
+        [src]="n.icon.path"
+      />
+
+      <span class="text">{{ n.title }}</span>
+    </span>
+
+    <span class="spacer"></span>
+    <span class="login-wrapper"
+      ><app-login-dropdown></app-login-dropdown>
     </span>
   </mat-toolbar>
 </nav>

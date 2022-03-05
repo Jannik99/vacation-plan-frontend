@@ -1,0 +1,55 @@
+<span class="wrapper" #wrapper (click)="toggleDropdown()"
+  ><div
+    class="profile-image svg-icon"
+    [inlineSVG]="'/assets/Icons/ico-smile-face.svg'"
+  ></div>
+  <span class="username">Benutzername</span>
+
+  <div
+    *ngIf="!dropdownOpen"
+    class="svg-icon"
+    [inlineSVG]="'/assets/Icons/ico-chevron-down.svg'"
+  ></div>
+  <div
+    *ngIf="dropdownOpen"
+    class="svg-icon"
+    [inlineSVG]="'/assets/Icons/ico-chevron-up.svg'"
+  ></div
+></span>
+
+<div
+  class="close-overlay"
+  (click)="toggleDropdown()"
+  *ngIf="dropdownOpen"
+></div>
+<div #dropdown class="dropdown" *ngIf="dropdownOpen">
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Email/Benutzername</mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="usernameFormControl"
+        placeholder="Max@Mustermann.de"
+      />
+
+      <mat-error *ngIf="usernameFormControl.hasError('required')">
+        Bitte Nutzernamen eingeben
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Passwort</mat-label>
+      <input
+        type="password"
+        matInput
+        [formControl]="passwordFormControl"
+        placeholder="Passwort"
+      />
+
+      <mat-error *ngIf="passwordFormControl.hasError('required')">
+        Bitte Passwort eingeben
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>

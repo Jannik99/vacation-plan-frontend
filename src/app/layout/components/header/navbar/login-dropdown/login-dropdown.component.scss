@@ -1,0 +1,31 @@
+@import "src/app/shared/styles/colors.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  .profile-image {
+    // Styles to be added
+  }
+  .username {
+    margin: 0 10px;
+  }
+}
+
+.dropdown {
+  mat-form-field {
+    display: block;
+  }
+  position: fixed;
+  background: $charcoal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.close-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}

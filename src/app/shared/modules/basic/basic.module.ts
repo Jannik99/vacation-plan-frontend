@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 // Material Form Controls
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -41,6 +43,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 
 @NgModule({
   declarations: [],
@@ -81,6 +84,9 @@ import { MatTreeModule } from '@angular/material/tree';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
+    HttpClientModule,
+    InlineSVGModule,
+    ReactiveFormsModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -118,6 +124,9 @@ import { MatTreeModule } from '@angular/material/tree';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
+    HttpClientModule,
+    InlineSVGModule,
+    ReactiveFormsModule,
   ],
 })
 export class BasicModule {}
