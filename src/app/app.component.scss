@@ -1,1 +1,7 @@
 @import "./shared/styles/colors.scss";
+::ng-deep {
+  html,
+  body {
+    height: 100%;
+  }
+}

@@ -19,19 +19,10 @@ export class LoginDropdownComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    this.setDropdownPosition();
-  }
+  ngAfterViewInit(): void {}
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
-  }
-
-  private setDropdownPosition() {
-    const { top, left, width } =
-      this.wrapper.nativeElement.getBoundingClientRect();
-    this.dropdown.nativeElement.style.top = `${top + 30}px`;
-    this.dropdown.nativeElement.style.left = `${left + width / 2 - 40}px`;
   }
 
   private login(username: string, password: string) {

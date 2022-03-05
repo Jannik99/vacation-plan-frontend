@@ -43,6 +43,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { TranslateModule } from '@ngx-translate/core';
 import { InlineSVGModule } from 'ng-inline-svg-2';
 
 @NgModule({
@@ -87,6 +88,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
     HttpClientModule,
     InlineSVGModule,
     ReactiveFormsModule,
+    TranslateModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -127,6 +129,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
     HttpClientModule,
     InlineSVGModule,
     ReactiveFormsModule,
+    TranslateModule,
   ],
 })
 export class BasicModule {}
