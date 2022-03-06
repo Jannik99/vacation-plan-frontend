@@ -1,1 +1,6 @@
-<p>function-buttons works!</p>
+<div class="function-buttons-wrapper">
+  <app-function-button
+    *ngFor="let fbtn of functionButtons"
+    [functionButton]="fbtn"
+  ></app-function-button>
+</div>

@@ -1,0 +1,11 @@
+<div
+  class="function-button-bg"
+  [style.background]="functionButton.color.background"
+  [style.color]="functionButton.color.font"
+>
+  <div class="icon" [inlineSVG]="functionButton.icon.path"></div>
+  <div class="text">
+    <h4>{{ functionButton.name }}</h4>
+    <p>{{ functionButton.text }}</p>
+  </div>
+</div>
