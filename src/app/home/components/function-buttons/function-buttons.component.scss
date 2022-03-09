@@ -1,8 +1,11 @@
+@import "src/app/shared/styles/colors.scss";
+@import "src/app/shared/styles/general-styles.scss";
+
 .function-buttons-wrapper {
-  position: relative;
   top: 45vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 100px;
+  background: $charcoal;
 }

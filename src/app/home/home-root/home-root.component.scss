@@ -1,5 +1,6 @@
-.background {
-  background-image: url("/assets/Images/sunrise.jpg");
-  background-size: cover;
-  height: 100%;
+@import "src/app/shared/styles/colors.scss";
+@import "src/app/shared/styles/general-styles.scss";
+
+.home-wrapper {
+  background: $charcoal;
 }

@@ -1,4 +1,2 @@
-#router-outlet-wrapper {
-  padding-top: 75px;
-  height: calc(100vh - 75px);
-}
+@import "src/app/shared/styles/general-styles.scss";
+@import "src/app/shared/styles/colors.scss";

@@ -29,6 +29,12 @@ $size: 180px;
   &:hover > .text {
     animation: flip-back 0.75s forwards;
   }
+  &:not(:hover) > .icon {
+    animation: flip-back 0.75s forwards;
+  }
+  &:not(:hover) > .text {
+    animation: flip 0.75s forwards;
+  }
 }
 
 ::ng-deep .function-button-bg > .icon > svg {
