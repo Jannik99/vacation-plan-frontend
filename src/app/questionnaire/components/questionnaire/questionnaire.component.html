@@ -1,0 +1,11 @@
+<div class="parralax">
+  <div class="container">
+    <div class="content">
+      <app-questionnaire-question
+        *ngFor="let question of questions; let i = index"
+        [question]="question"
+        [questionIndex]="i"
+      ></app-questionnaire-question>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import "src/app/shared/styles/colors.scss";
-@import "src/app/shared/styles/general-styles.scss";
+:root {
+  @import "src/app/shared/styles/general-styles.scss";
+}
 
 html,
 body {

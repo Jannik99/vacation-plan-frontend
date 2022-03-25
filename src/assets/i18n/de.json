@@ -22,7 +22,7 @@
     "TITLE": "Fragebogen",
     "QUESTIONS": {
       "NUMBER_OF_PEOPLE": {
-        "QUESTION": "Mit wie viele Personen möchten Sie reisen?"
+        "QUESTION": "Mit wie vielen Personen möchten Sie reisen?"
       },
       "NUMBER_OF_DAYS": {
         "QUESTION": "Wie viele Tage möchten Sie reisen?"
