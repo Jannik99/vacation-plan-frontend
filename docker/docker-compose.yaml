@@ -2,7 +2,7 @@ version: "1.0"
 
 services:
   angular:
-    container_name: angular
+    container_name: vacation-plan-frontend
     build:
       context: ../
       dockerfile: Dockerfile

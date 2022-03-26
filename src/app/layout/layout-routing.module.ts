@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../authguard.guard';
 import { LayoutRootComponent } from './components/layout-root/layout-root.component';
 
 const routes: Routes = [
@@ -18,6 +19,12 @@ const routes: Routes = [
             (m) => m.QuestionnaireModule
           ),
         path: 'questionnaire',
+      },
+      {
+        canActivate: [AuthGuard],
+        loadChildren: () =>
+          import('../my-data/my-data.module').then((m) => m.MyDataModule),
+        path: 'my-data',
       },
     ],
   },
