@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { LoginService } from 'src/app/shared/services/login.service';
 
 @Component({
   selector: 'app-login-dropdown',
@@ -15,7 +14,7 @@ export class LoginDropdownComponent implements OnInit, AfterViewInit {
   usernameFormControl = new FormControl('', [Validators.required]);
   passwordFormControl = new FormControl('', [Validators.required]);
 
-  constructor(private loginservice: LoginService) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
@@ -26,8 +25,8 @@ export class LoginDropdownComponent implements OnInit, AfterViewInit {
   }
 
   private login(username: string, password: string) {
-    if (this.loginservice.login(username, password)) {
-      this.dropdownOpen = false;
-    }
+    // if (this.loginservice.login(username, password)) {
+    //   this.dropdownOpen = false;
+    // }
   }
 }
