@@ -10,7 +10,19 @@ export class NewPlanComponent implements OnInit {
   backgroundImageString: string =
     'url(' + this.plannerService.currentPlannedTrip.image + ')';
 
+  files: File[] = [];
+
   constructor(public plannerService: TripPlannerService) {}
 
   ngOnInit(): void {}
+
+  onSelect(event: { addedFiles: any }) {
+    console.log(event);
+    this.files.push(...event.addedFiles);
+  }
+
+  onRemove(event: File) {
+    console.log(event);
+    this.files.splice(this.files.indexOf(event), 1);
+  }
 }
