@@ -2,7 +2,7 @@
   "NAME": "VacationPlan",
   "TITLE": "Add title ",
   "NAVIGATTION": {
-    "QUESTIONNAIRE": "Questionnaire",
+    "PLANNER": "Planner",
     "MY_DATA": "My data",
     "TRAVEL_ADICE": "Travel adice",
     "MORE": "More"

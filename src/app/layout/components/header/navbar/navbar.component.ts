@@ -20,8 +20,8 @@ export class NavbarComponent implements OnInit {
       exactMatch: true,
     },
     {
-      title: 'Fragebogen',
-      link: 'questionnaire',
+      title: 'Reiseplaner',
+      link: 'planner',
       icon: { path: '/assets/Icons/ico-list-alt.svg', type: IconType.SVG },
       exactMatch: false,
     },

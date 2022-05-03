@@ -23,15 +23,13 @@
     "@angular/router": "~13.1.0",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
-    "keycloak-angular": "^9.1.0",
-    "keycloak-js": "^16.1.1",
     "ng-inline-svg-2": "^14.0.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.1.2",
+    "@angular-devkit/build-angular": "^13.3.4",
     "@angular/cli": "~13.1.2",
     "@angular/compiler-cli": "~13.1.0",
     "@types/jasmine": "~3.10.0",

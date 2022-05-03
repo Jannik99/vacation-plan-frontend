@@ -14,10 +14,8 @@ const routes: Routes = [
       },
       {
         loadChildren: () =>
-          import('../questionnaire/questionnaire.module').then(
-            (m) => m.QuestionnaireModule
-          ),
-        path: 'questionnaire',
+          import('../planner/planne.module').then((m) => m.PlannerModule),
+        path: 'planner',
       },
       {
         loadChildren: () =>

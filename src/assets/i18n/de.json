@@ -2,7 +2,7 @@
   "NAME": "VacationPlan",
   "TITLE": "Titel ergänzen ",
   "NAVIGATTION": {
-    "QUESTIONNAIRE": "Fragebogen",
+    "PLANNER": "Reiseplaner",
     "MY_DATA": "Meine Daten",
     "TRAVEL_ADICE": "Reisetipps",
     "MORE": "Weiteres"
@@ -18,25 +18,7 @@
     "TITLE": "Willkommen bei VacationPlan",
     "TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
   },
-  "QUESTIONNAIRE": {
-    "TITLE": "Fragebogen",
-    "QUESTIONS": {
-      "NUMBER_OF_PEOPLE": {
-        "QUESTION": "Mit wie vielen Personen möchten Sie reisen?"
-      },
-      "NUMBER_OF_DAYS": {
-        "QUESTION": "Wie viele Tage möchten Sie reisen?"
-      },
-      "WHEN_TO_GO": {
-        "QUESTION": "Wann möchten Sie reisen?"
-      },
-      "NATURE_OR_PARIS": {
-        "QUESTION": "Wenn Sie die Wahl zwischen einem Campingausflug in der Natur und einem Trip nach Paris hätte, wofür würden Sie sich entscheiden ?",
-        "OPTIONS": {
-          "NATURE": "Campingausflug in der Natur",
-          "PARIS": "Trip nach Paris"
-        }
-      }
-    }
+  "PLANNER": {
+    "TITLE": "Reiseplaner"
   }
 }
