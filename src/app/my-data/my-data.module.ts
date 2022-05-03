@@ -1,23 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { MyDataRoutingModule } from './my-data-routing.module';
-import { MyDataRootComponent } from './my-data-root/my-data-root.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { MyQuestionsComponent } from './components/my-questions/my-questions.component';
+import { NgModule } from '@angular/core';
 import { MyTravelsComponent } from './components/my-travels/my-travels.component';
-
+import { ProfileComponent } from './components/profile/profile.component';
+import { MyDataRootComponent } from './my-data-root/my-data-root.component';
+import { MyDataRoutingModule } from './my-data-routing.module';
 
 @NgModule({
-  declarations: [
-    MyDataRootComponent,
-    ProfileComponent,
-    MyQuestionsComponent,
-    MyTravelsComponent
-  ],
-  imports: [
-    CommonModule,
-    MyDataRoutingModule
-  ]
+  declarations: [MyDataRootComponent, ProfileComponent, MyTravelsComponent],
+  imports: [CommonModule, MyDataRoutingModule],
 })
-export class MyDataModule { }
+export class MyDataModule {}
