@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
@@ -83,6 +83,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
     InlineSVGModule,
     ReactiveFormsModule,
     TranslateModule,
+    FormsModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -124,6 +125,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
     InlineSVGModule,
     ReactiveFormsModule,
     TranslateModule,
+    FormsModule,
   ],
 })
 export class BasicModule {}

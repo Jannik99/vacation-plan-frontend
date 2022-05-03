@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="trip-plan">
+    <div
+      class="header"
+      [ngStyle]="{ 'background-image': backgroundImageString }"
+    >
+      <mat-form-field class="form-el" appearance="fill">
+        <mat-label>Tripname</mat-label>
+        <input matInput [(ngModel)]="plannerService.currentPlannedTrip.name" />
+      </mat-form-field>
+
+      <mat-form-field class="form-el" appearance="fill">
+        <mat-label>Beschreibung</mat-label>
+        <textarea
+          matInput
+          [(ngModel)]="plannerService.currentPlannedTrip.description"
+        ></textarea>
+      </mat-form-field>
+
+      <div class="form-el">
+        <span class="label"> Titelbild einfügen </span>
+        <div><input type="file" /></div>
+        <mat-form-field class="form-el" appearance="fill">
+          <mat-label>Link</mat-label>
+          <input
+            matInput
+            [(ngModel)]="plannerService.currentPlannedTrip.name"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>

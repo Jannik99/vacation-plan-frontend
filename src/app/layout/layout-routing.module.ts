@@ -14,7 +14,7 @@ const routes: Routes = [
       },
       {
         loadChildren: () =>
-          import('../planner/planne.module').then((m) => m.PlannerModule),
+          import('../planner/planner.module').then((m) => m.PlannerModule),
         path: 'planner',
       },
       {

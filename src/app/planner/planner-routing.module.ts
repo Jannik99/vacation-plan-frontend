@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NewPlanComponent } from './components/new-plan/new-plan.component';
 import { PlannerRootComponent } from './planner-root/planner-root.component';
 
 const routes: Routes = [
@@ -9,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: PlannerRootComponent,
+        component: NewPlanComponent,
       },
     ],
   },
