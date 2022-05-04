@@ -1,8 +1,8 @@
 export interface ILocation {
-  id: number;
+  id: string;
   name: string;
   description: string;
-  image: string;
+  image?: File;
   latitude?: number;
   longitude?: number;
 }

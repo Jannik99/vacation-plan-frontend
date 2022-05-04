@@ -7,22 +7,47 @@ import { TripPlannerService } from 'src/app/shared/services/trip-planner.service
   styleUrls: ['./new-plan.component.scss'],
 })
 export class NewPlanComponent implements OnInit {
-  backgroundImageString: string =
-    'url(' + this.plannerService.currentPlannedTrip.image + ')';
+  backgroundImageString: string = '';
 
   files: File[] = [];
 
   constructor(public plannerService: TripPlannerService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.plannerService.currentPlannedTrip.image) {
+      this.files.push(this.plannerService.currentPlannedTrip.image);
+      this.setBackgroundImageString();
+    }
+  }
 
   onSelect(event: { addedFiles: any }) {
     console.log(event);
     this.files.push(...event.addedFiles);
+    this.plannerService.currentPlannedTrip.image = this.files[0];
+    this.setBackgroundImageString();
   }
 
   onRemove(event: File) {
     console.log(event);
     this.files.splice(this.files.indexOf(event), 1);
+    this.plannerService.currentPlannedTrip.image = this.files[0];
+    this.setBackgroundImageString();
+  }
+
+  addLocation(): void {
+    this.plannerService.addLocationToCurrent();
+  }
+
+  saveTrip(): void {
+    this.plannerService.saveTrip();
+  }
+
+  private setBackgroundImageString(imagelink: string = ''): void {
+    const ret =
+      imagelink.length > 0
+        ? 'url(' + imagelink + ')'
+        : 'url(' + URL.createObjectURL(this.files[0]) + ')';
+    this.backgroundImageString = ret;
+    console.log(ret);
   }
 }

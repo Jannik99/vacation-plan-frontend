@@ -1,9 +1,6 @@
 @import "src/app/shared/styles/colors.scss";
 @import "src/app/shared/styles/general-styles.scss";
 
-.wrapper {
-}
-
 .header {
   background-attachment: fixed;
   background-position: center;
@@ -15,6 +12,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.trip-plan {
+  background-color: $baby-blue;
+}
+
 .form-el {
   padding: 15px 15px 0 15px;
   width: 50%;
@@ -22,26 +24,58 @@
 }
 .form-el .label {
   color: rgba(255, 255, 255, 0.7);
+  font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
 }
 
 .upload-wrapper {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 50% 50%;
   .label {
     grid-column: 1 / span 2;
   }
-  .link-input {
-    width: calc(100% - 10px);
-  }
-
   ngx-dropzone,
   .custom-dropzone {
     height: 250px;
     background: $charcaol-opacity-50;
-    color: #fff;
-    border: 5px dashed $coral;
+    border: 5px dashed $charcoal;
+
     border-radius: 5px;
     font-size: 20px;
+    &:hover {
+      border: 5px dashed $coral;
+    }
+  }
+}
+
+.save-btn {
+  margin: 10px auto;
+  width: calc(50% + 30px);
+  background-color: $charcoal;
+  color: $white;
+  &:hover {
+    background-color: $coral;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 50px;
+  align-items: center;
+  padding: 0 20px;
+  background: $charcaol-opacity-50;
+  * {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+}
+
+::ng-deep .add-btn > svg {
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: $coral;
   }
 }

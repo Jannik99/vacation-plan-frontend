@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <div
+    [inlineSVG]="'/assets/Icons/ico-x-circle.svg'"
+    (click)="deleteThisStep()"
+    class="delete-btn"
+  ></div>
+  <mat-card class="card">
+    <div class="title">
+      <img [src]="imageLink" *ngIf="imageLink.length > 0" />
+      <mat-form-field class="form-el" appearance="fill">
+        <mat-label>Ortsname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="plannerService.currentPlannedTrip.locations[index].name"
+        />
+      </mat-form-field>
+    </div>
+    <mat-form-field class="form-el" appearance="fill">
+      <mat-label>Beschreibung</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="
+          plannerService.currentPlannedTrip.locations[index].description
+        "
+      ></textarea>
+    </mat-form-field>
+    <div class="form-el upload-wrapper">
+      <div
+        class="custom-dropzone"
+        ngx-dropzone
+        [accept]="'image/*'"
+        (change)="onSelect($event)"
+        accept="image/jpeg,image/jpg,image/png,image/gif"
+      >
+        <ngx-dropzone-label>
+          <div>
+            <span class="label"> Bild einfügen</span>
+          </div>
+        </ngx-dropzone-label>
+        <ngx-dropzone-image-preview
+          ngProjectAs="ngx-dropzone-preview"
+          *ngFor="let f of files"
+          [file]="f"
+          [removable]="true"
+          (removed)="onRemove(f)"
+        >
+          <!-- <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label> -->
+        </ngx-dropzone-image-preview>
+      </div>
+    </div>
+    <div class=""></div>
+    <mat-form-field class="form-el" appearance="fill">
+      <mat-label>Breitengrad</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="
+          plannerService.currentPlannedTrip.locations[index].latitude
+        "
+      />
+    </mat-form-field>
+    <mat-form-field class="form-el" appearance="fill">
+      <mat-label>Längengrad</mat-label>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="
+          plannerService.currentPlannedTrip.locations[index].longitude
+        "
+      />
+    </mat-form-field>
+  </mat-card>
+</div>

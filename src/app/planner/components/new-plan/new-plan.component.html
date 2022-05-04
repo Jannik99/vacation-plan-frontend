@@ -4,6 +4,9 @@
       class="header"
       [ngStyle]="{ 'background-image': backgroundImageString }"
     >
+      <button mat-button class="save-btn" (click)="saveTrip()">
+        Speichern
+      </button>
       <mat-form-field class="form-el" appearance="fill">
         <mat-label>Tripname</mat-label>
         <input matInput [(ngModel)]="plannerService.currentPlannedTrip.name" />
@@ -19,39 +22,43 @@
 
       <div class="form-el upload-wrapper">
         <span class="label"> Titelbild einfügen </span>
-        <div>
-          <div
-            class="custom-dropzone"
-            ngx-dropzone
-            [accept]="'image/*'"
-            (change)="onSelect($event)"
+        <div
+          class="custom-dropzone"
+          ngx-dropzone
+          [accept]="'image/*'"
+          (change)="onSelect($event)"
+          accept="image/jpeg,image/jpg,image/png,image/gif"
+        >
+          <ngx-dropzone-label>
+            <div>
+              <span class="label"> Drop it like a bomb</span>
+            </div>
+          </ngx-dropzone-label>
+          <ngx-dropzone-image-preview
+            ngProjectAs="ngx-dropzone-preview"
+            *ngFor="let f of files"
+            [file]="f"
+            [removable]="true"
+            (removed)="onRemove(f)"
           >
-            <ngx-dropzone-label>
-              <div>
-                <span>Drop it like a bomb</span>
-              </div>
-            </ngx-dropzone-label>
-            <ngx-dropzone-image-preview
-              ngProjectAs="ngx-dropzone-preview"
-              *ngFor="let f of files"
-              [file]="f"
-              [removable]="true"
-              (removed)="onRemove(f)"
-            >
-              <ngx-dropzone-label
-                >{{ f.name }} ({{ f.type }})</ngx-dropzone-label
-              >
-            </ngx-dropzone-image-preview>
-          </div>
+            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+          </ngx-dropzone-image-preview>
         </div>
-        <mat-form-field appearance="fill" class="link-input">
-          <mat-label>Link</mat-label>
-          <input
-            matInput
-            [(ngModel)]="plannerService.currentPlannedTrip.name"
-          />
-        </mat-form-field>
       </div>
+    </div>
+    <div class="steps">
+      <app-planner-step-edit
+        *ngFor="
+          let location of plannerService.currentPlannedTrip.locations;
+          let i = index
+        "
+        [index]="i"
+      ></app-planner-step-edit>
+      <div
+        class="add-btn"
+        [inlineSVG]="'/assets/Icons/ico-plus.svg'"
+        (click)="addLocation()"
+      ></div>
     </div>
   </div>
 </div>
