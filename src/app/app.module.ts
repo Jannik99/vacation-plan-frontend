@@ -10,14 +10,13 @@ import {
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MapComponent } from './shared/components/map/map.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent, MapComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

@@ -1,1 +1,10 @@
-<p>my-travels works!</p>
+<div class="wrapper">
+  <div class="trip-list">
+    <div *ngFor="let trip of trips" class="trip-el" (click)="showTrip(trip)">
+      {{ trip.name }}
+    </div>
+  </div>
+  <div class="trip-wrapper">
+    <app-trip [trip]="shownTrip" *ngIf="shownTrip !== null"></app-trip>
+  </div>
+</div>

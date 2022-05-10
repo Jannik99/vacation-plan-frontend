@@ -9,4 +9,9 @@ export class Utilities {
       return v.toString(16);
     });
   }
+
+  // Get the Link to a given File
+  public getFileLink(image: File): string {
+    return URL.createObjectURL(image);
+  }
 }

@@ -1,4 +1,7 @@
-<div class="sidebar"></div>
+<div class="sidebar">
+  <div [routerLink]="'profile'" class="nav-el">Mein Profil</div>
+  <div [routerLink]="'my-travels'" class="nav-el">Meine Reisen</div>
+</div>
 <div class="content">
   <router-outlet></router-outlet>
 </div>

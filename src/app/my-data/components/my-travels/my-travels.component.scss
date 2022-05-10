@@ -1,0 +1,27 @@
+@import "src/app/shared/styles/general-styles.scss";
+@import "src/app/shared/styles/colors.scss";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  height: 100%;
+}
+
+.trip-list {
+  height: 100%;
+}
+
+.trip-el {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  &:hover {
+    background-color: $coral;
+  }
+}
+
+.trip-wrapper {
+  padding: 10px;
+}

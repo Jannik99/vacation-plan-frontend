@@ -39,9 +39,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { TranslateModule } from '@ngx-translate/core';
 import { InlineSVGModule } from 'ng-inline-svg-2';
+import { TripComponent } from './components/trip/trip.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [TripComponent],
   imports: [
     CommonModule,
     MatAutocompleteModule,
@@ -126,6 +127,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
     ReactiveFormsModule,
     TranslateModule,
     FormsModule,
+    TripComponent,
   ],
 })
 export class BasicModule {}
