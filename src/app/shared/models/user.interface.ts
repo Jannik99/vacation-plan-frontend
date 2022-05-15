@@ -1,8 +1,8 @@
 export interface IUser {
-  userToken: string;
-  profileImage: String;
+  profileImageLink: String;
   username: string;
   firstName: string;
   lastName: string;
   email: string;
+  password: string;
 }

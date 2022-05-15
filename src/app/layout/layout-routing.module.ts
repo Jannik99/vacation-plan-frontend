@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from '../shared/services/auth-guard.service';
 import { LayoutRootComponent } from './components/layout-root/layout-root.component';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('../planner/planner.module').then((m) => m.PlannerModule),
         path: 'planner',
+        canActivate: [AuthGuardService],
       },
       {
         loadChildren: () =>
