@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <!-- <div [inlineSVG]="'/assets/Icons/ico-x-circle.svg'" class="delete-btn"></div> -->
+  <mat-card class="card">
+    <div class="title">
+      <img [src]="imageLink" *ngIf="imageLink.length > 0" />
+      <h4 *ngIf="location.name">{{ location.name }}</h4>
+    </div>
+    <p *ngIf="location.description">{{ location.description }}</p>
+    <p *ngIf="location.latitude && location.longitude">
+      {{ "TRIPS.LOCATIONS.COORDINATES" | translate }} <br />{{
+        location.latitude
+      }},
+      {{ location.longitude }}
+    </p>
+  </mat-card>
+</div>

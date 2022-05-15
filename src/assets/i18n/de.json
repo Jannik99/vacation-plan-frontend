@@ -7,6 +7,15 @@
     "TRAVEL_ADICE": "Reisetipps",
     "MORE": "Weiteres"
   },
+  "UTILITY": {
+    "SAVE": "Speichern",
+    "CANCEL": "Abbrechen",
+    "EDIT": "Bearbeiten",
+    "DELETE": "Löschen",
+    "ADD": "Hinzufügen",
+    "SAVE_CHANGES": "Änderungen speichern",
+    "DESCRIPTION": "Beschreibung"
+  },
   "LOGIN": {
     "USERNAME": "Benutzername",
     "PASSWORD": "Passwort",
@@ -20,5 +29,36 @@
   },
   "PLANNER": {
     "TITLE": "Reiseplaner"
+  },
+  "MY_DATA": {
+    "TITLE": "Meine Daten",
+    "MY_TRAVELS": {
+      "TITLE": "Meine Reisen"
+    },
+    "PROFILE": {
+      "TITLE": "Mein Profil"
+    }
+  },
+  "TRIPS": {
+    "TITLE": "Reisen",
+    "NEW_TRIP": "Neue Reise",
+    "LOCATIONS": {
+      "TITLE": "Orte",
+      "NAME": "Name",
+      "DESCRIPTION": "Beschreibung",
+      "COORDINATES": "Koordinaten",
+      "IMAGE": "Bild"
+    },
+    "ADD_LOCATION": "Ort hinzufügen"
+  },
+  "FORM_FIELDS": {
+    "IMAGE_UPLOAD": {
+      "TITLE": "Bild hochladen",
+      "UPLOAD_TITLE_IMAGE": "Titelbild hochladen",
+      "DROP_IT_LIKE_A_BOMB": "D-D-Drop it like a bomb"
+    },
+    "TRIP_NAME": {
+      "TITLE": "Reise Name"
+    }
   }
 }

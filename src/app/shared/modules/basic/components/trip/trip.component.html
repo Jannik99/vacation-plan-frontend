@@ -1,4 +1,20 @@
-<p>Test</p>
-{{ trip.name }}<br />
-{{ trip.description }}<br />
-<img [src]="imageUrl" *ngIf="imageUrl.length > 0" />
+<div class="wrapper">
+  <div class="header">
+    <h2>{{ trip.name }}</h2>
+    <div class="buttons">
+      <button class="button delete" (click)="delete()">
+        {{ "UTILITY.DELETE" | translate }}
+      </button>
+    </div>
+  </div>
+
+  <img [src]="imageUrl" *ngIf="imageUrl.length > 0" />
+  <p>{{ trip.description }}</p>
+
+  <div class="locations" *ngIf="trip.locations.length > 0">
+    <app-location-card
+      *ngFor="let location of trip.locations; let i = index"
+      [location]="location"
+    ></app-location-card>
+  </div>
+</div>

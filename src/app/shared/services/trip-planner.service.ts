@@ -47,6 +47,12 @@ export class TripPlannerService {
     this.currentPlannedTrip.locations.splice(locationIndex, 1);
   }
 
+  removeTrip(trip: ITrip) {
+    const index = this.trips.findIndex((t) => t.id === trip.id);
+    this.trips.splice(index, 1);
+    this.saveTrips();
+  }
+
   saveTrip() {
     const tripIndex = this.getTripIndex(this.currentPlannedTrip.id);
     if (tripIndex > -1) {
@@ -55,8 +61,9 @@ export class TripPlannerService {
       this.currentPlannedTrip.id = this.trips.length + 1;
       this.trips.push(this.currentPlannedTrip);
     }
-    localStorage.setItem('trips', JSON.stringify(this.trips));
+    this.saveTrips();
   }
+
   getTripIndex(id: number) {
     return this.trips.findIndex((trip) => trip.id === id);
   }
@@ -66,5 +73,9 @@ export class TripPlannerService {
     if (trips) {
       this.trips = JSON.parse(trips);
     }
+  }
+
+  private saveTrips() {
+    localStorage.setItem('trips', JSON.stringify(this.trips));
   }
 }

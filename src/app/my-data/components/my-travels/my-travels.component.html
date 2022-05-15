@@ -1,10 +1,18 @@
 <div class="wrapper">
   <div class="trip-list">
-    <div *ngFor="let trip of trips" class="trip-el" (click)="showTrip(trip)">
+    <div
+      *ngFor="let trip of tripPlannerService.trips"
+      class="trip-el"
+      (click)="showTrip(trip)"
+    >
       {{ trip.name }}
     </div>
   </div>
   <div class="trip-wrapper">
-    <app-trip [trip]="shownTrip" *ngIf="shownTrip !== null"></app-trip>
+    <app-trip
+      [trip]="shownTrip"
+      (close)="hideTrip()"
+      *ngIf="shownTrip !== null"
+    ></app-trip>
   </div>
 </div>

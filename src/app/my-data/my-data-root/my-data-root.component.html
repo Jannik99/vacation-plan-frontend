@@ -1,6 +1,10 @@
 <div class="sidebar">
-  <div [routerLink]="'profile'" class="nav-el">Mein Profil</div>
-  <div [routerLink]="'my-travels'" class="nav-el">Meine Reisen</div>
+  <div [routerLink]="'profile'" class="nav-el">
+    {{ "MY_DATA.PROFILE.TITLE" | translate }}
+  </div>
+  <div [routerLink]="'my-travels'" class="nav-el">
+    {{ "MY_DATA.MY_TRAVELS.TITLE" | translate }}
+  </div>
 </div>
 <div class="content">
   <router-outlet></router-outlet>

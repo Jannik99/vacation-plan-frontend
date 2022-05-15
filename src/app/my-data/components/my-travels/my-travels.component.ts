@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ITrip } from 'src/app/shared/models/trip.interface';
+import { TripPlannerService } from 'src/app/shared/services/trip-planner.service';
 
 @Component({
   selector: 'app-my-travels',
@@ -7,11 +8,8 @@ import { ITrip } from 'src/app/shared/models/trip.interface';
   styleUrls: ['./my-travels.component.scss'],
 })
 export class MyTravelsComponent implements OnInit {
-  trips: ITrip[] = [];
   shownTrip: ITrip | null = null;
-  constructor() {
-    this.loadTrips();
-  }
+  constructor(public tripPlannerService: TripPlannerService) {}
 
   ngOnInit(): void {}
 
@@ -19,10 +17,7 @@ export class MyTravelsComponent implements OnInit {
     this.shownTrip = trip;
   }
 
-  private loadTrips() {
-    const trips = localStorage.getItem('trips');
-    if (trips) {
-      this.trips = JSON.parse(trips);
-    }
+  hideTrip() {
+    this.shownTrip = null;
   }
 }

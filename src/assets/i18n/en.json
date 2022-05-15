@@ -1,21 +1,64 @@
 {
   "NAME": "VacationPlan",
-  "TITLE": "Add title ",
+  "TITLE": "add title ",
   "NAVIGATTION": {
-    "PLANNER": "Planner",
-    "MY_DATA": "My data",
-    "TRAVEL_ADICE": "Travel adice",
+    "PLANNER": "Vacation Planner",
+    "MY_DATA": "My Data",
+    "TRAVEL_ADICE": "Travel Advice",
     "MORE": "More"
+  },
+  "UTILITY": {
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "ADD": "Add",
+    "SAVE_CHANGES": "Save Changes",
+    "DESCRIPTION": "Description"
   },
   "LOGIN": {
     "USERNAME": "Username",
     "PASSWORD": "Password",
     "LOGIN": "Login",
-    "FORGOT_PASSWORD": "Forgot password?",
+    "FORGOT_PASSWORD": "Forgot Password",
     "REGISTER": "Register"
   },
   "WELCOME": {
     "TITLE": "Welcome to VacationPlan",
     "TEXT": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+  },
+  "PLANNER": {
+    "TITLE": "Vacation Planner"
+  },
+  "MY_DATA": {
+    "TITLE": "My Data",
+    "MY_TRAVELS": {
+      "TITLE": "My Travels"
+    },
+    "PROFILE": {
+      "TITLE": "My Profile"
+    }
+  },
+  "TRIPS": {
+    "TITLE": "Trips",
+    "NEW_TRIP": "New Trip",
+    "LOCATIONS": {
+      "TITLE": "Locations",
+      "NAME": "Name",
+      "DESCRIPTION": "Description",
+      "COORDINATES": "Coordinates",
+      "IMAGE": "Image"
+    },
+    "ADD_LOCATION": "Add Location"
+  },
+  "FORM_FIELDS": {
+    "IMAGE_UPLOAD": {
+      "TITLE": "Image Upload",
+      "UPLOAD_TITLE_IMAGE": "Upload Title Image",
+      "DROP_IT_LIKE_A_BOMB": "D-D-Drop it like a bomb"
+    },
+    "TRIP_NAME": {
+      "TITLE": "Trip Name"
+    }
   }
 }

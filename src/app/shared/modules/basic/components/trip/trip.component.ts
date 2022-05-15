@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ITrip } from 'src/app/shared/models/trip.interface';
+import { TripPlannerService } from 'src/app/shared/services/trip-planner.service';
 import { Utilities } from 'src/app/shared/utilities';
 
 @Component({
@@ -9,13 +10,19 @@ import { Utilities } from 'src/app/shared/utilities';
 })
 export class TripComponent implements OnInit {
   @Input() trip!: ITrip;
+  @Output() close: EventEmitter<boolean> = new EventEmitter<boolean>();
   imageUrl: string = '';
-  constructor() {}
+  constructor(private plannerService: TripPlannerService) {}
 
   ngOnInit(): void {
     console.log(this.trip);
     if (this.trip.image) {
       this.imageUrl = new Utilities().getFileLink(this.trip.image);
     }
+  }
+
+  delete() {
+    this.plannerService.removeTrip(this.trip);
+    this.close.emit(true);
   }
 }

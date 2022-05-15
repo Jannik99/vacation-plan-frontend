@@ -4,6 +4,10 @@ nav {
   background: $coral;
 }
 
+::ng-deep nav .toolbar {
+  user-select: none;
+}
+
 .toolbar {
   margin: auto;
   display: flex;
@@ -40,4 +44,8 @@ nav {
 }
 .spacer {
   flex: 0.25;
+}
+
+.selected {
+  color: $coral;
 }
