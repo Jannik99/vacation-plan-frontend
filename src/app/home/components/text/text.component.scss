@@ -1,5 +1,6 @@
 @import "src/app/shared/styles/colors.scss";
 @import "src/app/shared/styles/general-styles.scss";
+@import "src/app/shared/styles/animations.scss";
 
 .text-bg {
   width: 100%;
@@ -24,5 +25,9 @@
         text-align: center;
       }
     }
+  }
+
+  .chevron-down {
+    animation: scale-in-out 1.75s linear infinite;
   }
 }
