@@ -8,6 +8,7 @@
 }
 
 .trip-list {
+  background-color: $coral;
   height: 100%;
 }
 
@@ -17,7 +18,38 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  &:hover {
-    background-color: $coral;
+
+  &:hover,
+  &.active {
+    background-color: rgb(196, 218, 233);
   }
+}
+
+.add-trips-error,
+.choose-trip-error {
+  color: $charcaol-opacity-75;
+  display: flex;
+  justify-content: center;
+  .content {
+    display: block;
+    text-align: center;
+  }
+}
+
+.add-trips-error {
+  grid-column: 1 / span 2;
+}
+
+.choose-trip-error {
+  margin-top: calc($header-height + 10%);
+}
+
+::ng-deep .add-trips-error > .content svg,
+::ng-deep .choose-trip-error > .content svg {
+  width: 100px;
+  height: 100px;
+}
+
+.trip-wrapper {
+  background-color: $baby-blue-opacity-50;
 }

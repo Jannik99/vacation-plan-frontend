@@ -4,6 +4,7 @@
       *ngFor="let trip of tripPlannerService.trips"
       class="trip-el"
       (click)="showTrip(trip)"
+      [ngClass]="{ active: trip.id === shownTrip?.id }"
     >
       {{ trip.name }}
     </div>
@@ -14,5 +15,23 @@
       (close)="hideTrip()"
       *ngIf="shownTrip !== null"
     ></app-trip>
+    <div
+      *ngIf="shownTrip === null && tripPlannerService.trips.length > 0"
+      class="choose-trip-error"
+    >
+      <div class="content">
+        <div [inlineSVG]="'/assets/Icons/ico-alert-circle.svg'"></div>
+        Wähle eine Reise
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="shownTrip === null && tripPlannerService.trips.length === 0"
+    class="add-trips-error"
+  >
+    <div class="content">
+      <div [inlineSVG]="'/assets/Icons/ico-alert-circle.svg'"></div>
+      Füge Reisen hinzu
+    </div>
   </div>
 </div>

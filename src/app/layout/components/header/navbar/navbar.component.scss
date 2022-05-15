@@ -1,4 +1,5 @@
 @import "src/app/shared/styles/colors.scss";
+@import "src/app/shared/styles/general-styles.scss";
 
 nav {
   background: $coral;
@@ -13,7 +14,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 75px;
+  height: $header-height;
   background: $charcoal;
   padding: 0 50px;
 }

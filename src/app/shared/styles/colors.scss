@@ -1,14 +1,29 @@
 /* colorpalette */
+
+// Opacity 100
 $coral: #fdbfaf;
 $mimosa: #fcee96;
 $baby-blue: #7eb6d7;
 $charcoal: #4d5264;
 $white: #ffffff;
 
+// Opacity 75
+$baby-blue-opacity-75: rgba(126, 182, 215, 0.75);
+$charcaol-opacity-75: rgba(77, 66, 100, 0.75);
+$coral-opacity-75: rgba(253, 191, 175, 0.75);
+$mimosa-opacity-75: rgba(252, 238, 150, 0.75);
+$white-opacity-75: rgba(255, 255, 255, 0.75);
+
+// Opacity 50
 $baby-blue-opacity-50: rgba(126, 182, 215, 0.5);
 $charcaol-opacity-50: rgba(77, 82, 100, 0.5);
 $coral-opacity-50: rgba(253, 191, 175, 0.5);
 $mimosa-opacity-50: rgba(252, 238, 150, 0.5);
 $white-opacity-50: rgba(255, 255, 255, 0.5);
 
+// Opacity 25
+$baby-blue-opacity-25: rgba(126, 182, 215, 0.25);
+$charcaol-opacity-25: rgba(77, 82, 100, 0.25);
+$coral-opacity-25: rgba(253, 191, 175, 0.25);
+$mimosa-opacity-25: rgba(252, 238, 150, 0.25);
 $white-opacity-25: rgba(255, 255, 255, 0.25);

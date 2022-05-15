@@ -1,8 +1,8 @@
 <div class="sidebar">
-  <div [routerLink]="'profile'" class="nav-el">
+  <div [routerLink]="'profile'" class="nav-el" [routerLinkActive]="'active'">
     {{ "MY_DATA.PROFILE.TITLE" | translate }}
   </div>
-  <div [routerLink]="'my-travels'" class="nav-el">
+  <div [routerLink]="'my-travels'" class="nav-el" [routerLinkActive]="'active'">
     {{ "MY_DATA.MY_TRAVELS.TITLE" | translate }}
   </div>
 </div>

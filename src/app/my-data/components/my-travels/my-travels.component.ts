@@ -9,6 +9,7 @@ import { TripPlannerService } from 'src/app/shared/services/trip-planner.service
 })
 export class MyTravelsComponent implements OnInit {
   shownTrip: ITrip | null = null;
+
   constructor(public tripPlannerService: TripPlannerService) {}
 
   ngOnInit(): void {}
