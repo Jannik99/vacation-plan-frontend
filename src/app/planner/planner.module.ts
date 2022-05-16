@@ -1,3 +1,4 @@
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgxDropzoneModule } from 'ngx-dropzone';
@@ -13,6 +14,12 @@ import { PlannerRoutingModule } from './planner-routing.module';
     NewPlanComponent,
     PlannerStepEditComponent,
   ],
-  imports: [BasicModule, CommonModule, PlannerRoutingModule, NgxDropzoneModule],
+  imports: [
+    BasicModule,
+    CommonModule,
+    PlannerRoutingModule,
+    NgxDropzoneModule,
+    DragDropModule,
+  ],
 })
 export class PlannerModule {}

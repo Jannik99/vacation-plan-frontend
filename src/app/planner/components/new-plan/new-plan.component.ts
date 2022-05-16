@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { TripPlannerService } from 'src/app/shared/services/trip-planner.service';
 
@@ -36,6 +37,14 @@ export class NewPlanComponent implements OnInit {
 
   addLocation(): void {
     this.plannerService.addLocationToCurrent();
+  }
+
+  locationDropped(event: CdkDragDrop<string[]>) {
+    moveItemInArray(
+      this.plannerService.currentPlannedTrip.locations,
+      event.previousIndex,
+      event.currentIndex
+    );
   }
 
   saveTrip(): void {

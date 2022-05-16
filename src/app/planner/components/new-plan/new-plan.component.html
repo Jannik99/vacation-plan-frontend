@@ -52,13 +52,20 @@
         </div>
       </div>
     </div>
-    <div class="steps">
+    <div
+      class="steps"
+      cdkDropList
+      cdkDropListOrientation="horizontal"
+      (cdkDropListDropped)="locationDropped($event)"
+    >
       <app-planner-step-edit
         *ngFor="
           let location of plannerService.currentPlannedTrip.locations;
           let i = index
         "
         [index]="i"
+        cdkDrag
+        class="location-step"
       ></app-planner-step-edit>
       <div
         class="add-btn"

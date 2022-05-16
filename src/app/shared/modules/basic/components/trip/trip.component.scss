@@ -1,10 +1,14 @@
 @import "src/app/shared/styles/general-styles.scss";
 @import "src/app/shared/styles/colors.scss";
-@import "src/app/shared/styles/objects.scss";
 
 .wrapper {
-  height: 100%;
+  height: calc(100% - 20px);
   padding: 10px 20px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .header {
@@ -12,16 +16,17 @@
   justify-content: space-between;
   align-items: center;
   .buttons {
+    width: 100px;
     display: flex;
-    align-items: center;
-    .delete {
-      background-color: $coral;
-      color: #000000;
-    }
+    justify-content: space-between;
   }
 }
 
 .locations {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 40px);
+  left: 0;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;

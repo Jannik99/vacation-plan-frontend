@@ -55,6 +55,10 @@
   }
 }
 
+.location-step {
+  cursor: move;
+}
+
 .steps {
   display: flex;
   flex-wrap: nowrap;

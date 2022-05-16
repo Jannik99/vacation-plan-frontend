@@ -1,15 +1,18 @@
 @import "src/app/shared/styles/general-styles.scss";
 @import "src/app/shared/styles/colors.scss";
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  height: 100%;
-}
-
 .trip-list {
-  background-color: $coral;
-  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  align-items: center;
+  background-color: $charcoal;
+  color: $white;
+  height: 40px;
+  * {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
 }
 
 .trip-el {
@@ -21,8 +24,12 @@
 
   &:hover,
   &.active {
-    background-color: rgb(196, 218, 233);
+    color: $coral;
   }
+}
+
+.trip-wrapper {
+  height: calc(100% - 40px);
 }
 
 .add-trips-error,
@@ -36,11 +43,8 @@
   }
 }
 
+.choose-trip-error,
 .add-trips-error {
-  grid-column: 1 / span 2;
-}
-
-.choose-trip-error {
   margin-top: calc($header-height + 10%);
 }
 
@@ -48,8 +52,4 @@
 ::ng-deep .choose-trip-error > .content svg {
   width: 100px;
   height: 100px;
-}
-
-.trip-wrapper {
-  background-color: $baby-blue-opacity-50;
 }
